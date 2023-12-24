@@ -7,7 +7,7 @@
     <script src="./script/index.js" defer></script>
     <title>Etch a Sketch!</title>
 </head>
-<body class="flex flex-col bg-dark svh-100">
+<body class="flex flex-col bg-dark svh-100 vw-100">
     <header class="flex content-center items-center"><b class="f-4">Etch-a-Sketch!</b></header>
     <main class="flex grow-1 items-center">
         <aside class="grow-2 flex flex-col items-center g-12">
@@ -23,14 +23,14 @@
                 </select>
             </div>
             <div>
-                <button class="bg-dark p-4 radius-100 aspect-ratio-1 w-10" onclick="gridBuilder()">Clear</button> 
-                <button class="bg-dark p-4 radius-100 aspect-ratio-1 w-10" onclick="eraser()" id="eraser">Eraser</button> 
+                <button class="bg-dark p-4 w-10" onclick="gridBuilder()">Clear</button> 
+                <button class="bg-dark p-4 w-10" onclick="eraser()" id="eraser">Eraser</button> 
             </div>
         </aside>
         <section class="grow-3 flex content-center items-center">
             <div class="bg-white container flex wrap"></div>
         </section>
     </main>
-    <footer class="flex content-center items-center"></footer>
+    <footer class="flex content-center items-center"><p></p>&nbsp;<a href="https://github.com/malginisus">abhishek</a></footer>
 </body>
 </html>

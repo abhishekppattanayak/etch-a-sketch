@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Wellfleet&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'wellfleet';
+}
+/* utility classes */
+.svh-100 {
+    height: 100svh;
+}
+.bg-dark {
+    background-color: #17171e;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-black {
+    background-color: black;
+}
+.flex {
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.grow-1 {
+    flex-grow: 1;
+}
+.grow-4 {
+    flex-grow: 4;
+}
+.shrink-1{
+    flex-shrink: 1;
+}.shrink-2{
+    flex-shrink: 2;
+}.shrink-3{
+    flex-shrink: 3;
+}.shrink-4{
+    flex-shrink: 4;
+}.shrink-5{
+    flex-shrink: 5;
+}
+.content-center {
+    justify-content: center;
+}
+.items-center {
+    align-items: center;
+}
+.container {
+    width: 540px;
+    aspect-ratio: 1;
+}
+/* specific classes */
+@media (max-width: 576px) {
+    .container {
+        background-color: black;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        background-color: gray;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        background-color: white;
+    }
+}

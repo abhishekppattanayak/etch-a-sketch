@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./script/index.js" defer></script>
+    <title>Etch a Sketch!</title>
+</head>
+<body class="flex flex-col bg-dark svh-100">
+    <header class="flex content-center items-center"><b>Etch a Sketch!</b></header>
+    <main class="flex grow-1 items-center">
+        <aside class="grow-1 flex content-center">
+            <label for="range">Select grid size:&nbsp;</label>
+            <select name="range" id="range" class="bg-dark">
+                <option value="1">1 x 1</option>
+                <option value="2">2 x 2</option>
+                <option value="6">6 x 6</option>
+                <option value="12">12 x 12</option>
+                <option value="16">16 x 16</option>
+                <option value="24">24 x 24</option>
+            </select>   
+        </aside>
+        <section class="grow-1 flex content-center items-center">
+            <div class="bg-white container flex wrap"></div>
+        </section>
+    </main>
+    <footer class="flex content-center items-center"></footer>
+</body>
+</html>

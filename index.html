@@ -8,20 +8,26 @@
     <title>Etch a Sketch!</title>
 </head>
 <body class="flex flex-col bg-dark svh-100">
-    <header class="flex content-center items-center"><b>Etch a Sketch!</b></header>
+    <header class="flex content-center items-center"><b class="f-4">Etch-a-Sketch!</b></header>
     <main class="flex grow-1 items-center">
-        <aside class="grow-1 flex content-center">
-            <label for="range">Select grid size:&nbsp;</label>
-            <select name="range" id="range" class="bg-dark">
-                <option value="1">1 x 1</option>
-                <option value="2">2 x 2</option>
-                <option value="6">6 x 6</option>
-                <option value="12">12 x 12</option>
-                <option value="16">16 x 16</option>
-                <option value="24">24 x 24</option>
-            </select>   
+        <aside class="grow-2 flex flex-col items-center g-12">
+            <div>
+                <label for="range">Select grid size:&nbsp;</label>
+                <select name="range" id="range" class="bg-dark p-4">
+                    <option value="16">16 x 16</option>
+                    <option value="24">24 x 24</option>
+                    <option value="36">36 x 36</option>
+                    <option value="48">48 x 48</option>
+                    <option value="54">54 x 54</option>
+                    <option value="60">60 x 60</option> 
+                </select>
+            </div>
+            <div>
+                <button class="bg-dark p-4 radius-100 aspect-ratio-1 w-10" onclick="gridBuilder()">Clear</button> 
+                <button class="bg-dark p-4 radius-100 aspect-ratio-1 w-10" onclick="eraser()" id="eraser">Eraser</button> 
+            </div>
         </aside>
-        <section class="grow-1 flex content-center items-center">
+        <section class="grow-3 flex content-center items-center">
             <div class="bg-white container flex wrap"></div>
         </section>
     </main>

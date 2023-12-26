@@ -2,7 +2,10 @@ document.querySelector('footer > p').textContent = `Copyright © ${new Date().ge
 
 let mouseDown = false;
 let erase = "dont";
+let rbm = 'no';
 const container = document.querySelector('.container');
+
+const rainbow = () => `rgb( ${Math.floor(Math.random()*256)} , ${Math.floor(Math.random()*256)} , ${Math.floor(Math.random()*256)})`;
 
 const gridBuilder = () => {
     let val = parseInt(document.querySelector('select').value, 10);
@@ -24,24 +27,24 @@ const gridBuilder = () => {
         document.addEventListener('mouseup', ()=> mouseDown=false);
 
         div.addEventListener('click', (event) => {
-            div.style.backgroundColor = erase=="erase"?'white':'black';
+            div.style.backgroundColor = erase=="erase"?'white': rbm=='yes'? rainbow() : 'black';
             div.style.border = erase=="erase"?'1px black solid':'1px white solid';
         });
 
         div.addEventListener('mousemove', (event) => {
             if(mouseDown){
-                div.style.backgroundColor=erase=="erase"?'white':'black';
+                div.style.backgroundColor=erase=="erase"?'white': rbm=='yes'? rainbow() : 'black';
                 div.style.border = erase=="erase"?'1px black solid':'1px white solid';
             }
         });
 
         div.addEventListener('touchstart', () => {
-            div.style.backgroundColor = erase=="erase"?'white':'black';
+            div.style.backgroundColor = erase=="erase"?'white': rbm=='yes'? rainbow() : 'black';
             div.style.border = erase=="erase"?'1px black solid':'1px white solid';
         })
 
         div.addEventListener('touchmove', ()=>{
-            div.style.backgroundColor = erase=="erase"?'white':'black';
+            div.style.backgroundColor = erase=="erase"?'white': rbm=='yes'? rainbow() : 'black';
             div.style.border = erase=="erase"?'1px black solid':'1px white solid';
         })
 
@@ -56,6 +59,11 @@ document.querySelector('select').addEventListener('change',gridBuilder);
 const eraser = () => {
     erase = erase=="erase"?"dont":"erase";
     document.querySelector('#eraser').classList.toggle('enabled');
+}
+
+const rainbowMode = () => {
+    rbm = rbm=='yes'?'no':'yes';
+    document.querySelector('button#rainbow').classList.toggle('enabled');
 }
 
 window.addEventListener('resize', ()=>{
